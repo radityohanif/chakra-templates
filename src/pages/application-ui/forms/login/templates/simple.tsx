@@ -20,7 +20,7 @@ export default function Simple() {
           </Field>
           <Stack>
             <Field label="Password" required>
-              <Input placeholder="Enter your password" />
+              <Input type="password" placeholder="Enter your password" />
             </Field>
             <Text
               textAlign={"end"}

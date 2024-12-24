@@ -1,8 +1,14 @@
-import { Flex, Heading, Image, Input, Stack, Text } from "@chakra-ui/react";
-import { Field } from "@/components/ui/field";
-import { Button } from "@/components/ui/button";
+/**
+ * If you don't already have the snippet, run the following command to add the password-input snippet
+ * npx @chakra-ui/cli snippet add password-input
+ */
 
-export default function SimpleWithLogo() {
+import { Button } from "@/components/ui/button";
+import { Field } from "@/components/ui/field";
+import { PasswordInput } from "@/components/ui/password-input";
+import { Flex, Heading, Image, Input, Stack, Text } from "@chakra-ui/react";
+
+export default function SimpleWithInteractivePassword() {
   return (
     <Flex h={"100vh"} justifyContent={"center"} alignItems={"center"}>
       <Stack
@@ -13,20 +19,20 @@ export default function SimpleWithLogo() {
         borderRadius={"lg"}
         border={"non"}
       >
-        <Flex justifyContent={"center"}>
-          <Image
-            h={10}
-            src="https://raw.githubusercontent.com/chakra-ui/chakra-ui/main/media/logo-colored@2x.png?raw=true"
-          />
-        </Flex>
-        <Heading textAlign={"center"}>Sign in to your account</Heading>
         <Stack gap={5}>
+          <Flex justifyContent={"center"}>
+            <Image
+              h={10}
+              src="https://raw.githubusercontent.com/chakra-ui/chakra-ui/main/media/logo-colored@2x.png?raw=true"
+            />
+          </Flex>
+          <Heading textAlign={"center"}>Sign in to your account</Heading>
           <Field label="Email" required>
             <Input placeholder="Enter your email" />
           </Field>
           <Stack>
             <Field label="Password" required>
-              <Input type="password" placeholder="Enter your password" />
+              <PasswordInput />
             </Field>
             <Text
               textAlign={"end"}
