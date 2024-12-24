@@ -8,7 +8,7 @@ import { Field } from "@/components/ui/field";
 import { PasswordInput } from "@/components/ui/password-input";
 import { Flex, Heading, Image, Input, Stack, Text } from "@chakra-ui/react";
 
-export default function SimpleWithInteractivePassword() {
+export default function InteractivePassword() {
   return (
     <Flex h={"100vh"} justifyContent={"center"} alignItems={"center"}>
       <Stack
@@ -17,7 +17,7 @@ export default function SimpleWithInteractivePassword() {
         w={"30vw"}
         shadow={"xl"}
         borderRadius={"lg"}
-        border={"non"}
+        border={"none"}
       >
         <Stack gap={5}>
           <Flex justifyContent={"center"}>
