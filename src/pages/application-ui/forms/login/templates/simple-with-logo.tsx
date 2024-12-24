@@ -1,8 +1,8 @@
-import { Flex, Heading, Input, Stack, Text } from "@chakra-ui/react";
+import { Flex, Heading, Image, Input, Stack, Text } from "@chakra-ui/react";
 import { Field } from "@/components/ui/field";
 import { Button } from "@/components/ui/button";
 
-export default function Simple() {
+export default function SimpleWithLogo() {
   return (
     <Flex h={"100vh"} justifyContent={"center"} alignItems={"center"}>
       <Stack
@@ -13,6 +13,12 @@ export default function Simple() {
         borderRadius={"lg"}
         border={"non"}
       >
+        <Flex justifyContent={"center"}>
+          <Image
+            h={10}
+            src="https://raw.githubusercontent.com/chakra-ui/chakra-ui/main/media/logo-colored@2x.png?raw=true"
+          />
+        </Flex>
         <Heading textAlign={"center"}>Sign in to your account</Heading>
         <Stack gap={5}>
           <Field label="Email" required>

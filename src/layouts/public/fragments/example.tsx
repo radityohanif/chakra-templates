@@ -24,10 +24,10 @@ export default function Example({
       </Flex>
       <Flex
         minH={"100vh"}
-        borderRadius={"xl"}
-        border={"solid gray 0.1px"}
+        borderRadius={"lg"}
         justifyContent={"center"}
         alignItems={"center"}
+        shadow={"xl"}
       >
         {children}
       </Flex>
