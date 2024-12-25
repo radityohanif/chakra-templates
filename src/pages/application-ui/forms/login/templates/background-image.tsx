@@ -41,7 +41,7 @@ export default function BackgroundImage() {
         <Stack
           p={10}
           gap={10}
-          w={"30vw"}
+          w={{ base: "100vw", md: "30vw" }}
           shadow={"xl"}
           borderRadius={"lg"}
           border={"none"}

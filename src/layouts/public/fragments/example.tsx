@@ -11,7 +11,11 @@ export default function Example({
 }) {
   return (
     <Stack gap={5}>
-      <Flex justifyContent={"space-between"}>
+      <Flex
+        gap={{ base: 5, md: 0 }}
+        flexDir={{ base: "column", md: "row" }}
+        justifyContent={"space-between"}
+      >
         <Heading textTransform={"capitalize"} fontSize={"2xl"}>
           {title}
         </Heading>
@@ -27,7 +31,7 @@ export default function Example({
         borderRadius={"lg"}
         justifyContent={"center"}
         alignItems={"center"}
-        shadow={"xl"}
+        shadow={{ base: "none", md: "xl" }}
       >
         {children}
       </Flex>

@@ -13,7 +13,7 @@ export default function ExampleLayouts({
   return (
     <>
       <Flex minH={"100vh"} justifyContent={"center"} alignItems={"center"}>
-        <Stack gap={100} mt={"20vh"} w={"80%"}>
+        <Stack gap={100} mt={"20vh"} w={{ base: "95%", md: "80%" }}>
           <Stack>
             <Heading fontSize={"3xl"}>{title}</Heading>
             <Text width={"60%"}>{desc}</Text>

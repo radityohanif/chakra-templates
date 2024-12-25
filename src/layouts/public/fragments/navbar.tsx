@@ -14,7 +14,7 @@ export default function Navbar() {
       position={"fixed"}
       px={10}
       py={2}
-      justifyContent={"space-between"}
+      justifyContent={{ base: "center", md: "space-between" }}
       boxShadow={"xl"}
       zIndex={99999}
       backdropFilter={"blur(10px)"}
@@ -26,7 +26,7 @@ export default function Navbar() {
           </Heading>
         </Link>
       </Flex>
-      <Flex gap={10}>
+      <Flex display={{ base: "none", md: "flex" }} gap={10}>
         <Flex gap={2}>
           <NavItem>Components</NavItem>
           <NavItem>Contribute</NavItem>

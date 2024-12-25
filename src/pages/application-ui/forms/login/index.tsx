@@ -12,16 +12,10 @@ export default function LoginFormsApplicationUiPages() {
     <ExampleLayouts>
       <Example children={<Simple />} title="simple" />
       <Example children={<SimpleWithLogo />} title="simple with logo" />
-      <Example
-        children={<InteractivePassword />}
-        title="interactive password"
-      />
+      <Example children={<InteractivePassword />} title="interactive password" />
       <Example children={<BackgroundColor />} title="background color" />
       <Example children={<BackgroundImage />} title="background image" />
-      <Example
-        children={<BackgroundImageBlur />}
-        title="background image blur"
-      />
+      <Example children={<BackgroundImageBlur />} title="background image blur" />
     </ExampleLayouts>
   );
 }

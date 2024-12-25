@@ -30,7 +30,7 @@ export default function BackgroundColor() {
         <Stack
           p={10}
           gap={10}
-          w={"30vw"}
+          w={{ base: "100vw", md: "30vw" }}
           shadow={{ base: "xl", _dark: "none" }}
           borderRadius={"lg"}
           border={"none"}
