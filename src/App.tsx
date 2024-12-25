@@ -1,9 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router";
-import HomePages from "./pages/home";
 import PublicLayouts from "./layouts/public";
 import LoginFormsApplicationUiPages from "./pages/application-ui/forms/login";
 import RegisterFormsApplicationUiPages from "./pages/application-ui/forms/register";
 import NavbarNavigationsApplicationUiPages from "./pages/application-ui/navigations/navbar";
+import HomePages from "./pages/home";
 export default function App() {
   return (
     <BrowserRouter>
@@ -19,7 +19,10 @@ export default function App() {
               />
             </Route>
             <Route path="navigations">
-              <Route path="navbar" element={<NavbarNavigationsApplicationUiPages />} />
+              <Route
+                path="navbar"
+                element={<NavbarNavigationsApplicationUiPages />}
+              />
             </Route>
           </Route>
         </Route>

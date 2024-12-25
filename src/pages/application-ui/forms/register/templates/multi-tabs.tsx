@@ -3,12 +3,21 @@
  * npx @chakra-ui/cli snippet add password-input
  */
 
-import { Flex, Heading, Image, Input, Stack, Text } from "@chakra-ui/react";
-import { Field } from "@/components/ui/field";
 import { Button } from "@/components/ui/button";
+import { Field } from "@/components/ui/field";
 import { PasswordInput } from "@/components/ui/password-input";
+import {
+  Flex,
+  Heading,
+  Image,
+  Input,
+  Stack,
+  Tabs,
+  Text,
+} from "@chakra-ui/react";
+import { LuFolder } from "react-icons/lu";
 
-export default function Simple() {
+export default function MultiTabs() {
   return (
     <Flex
       position={"relative"}
@@ -52,20 +61,44 @@ export default function Simple() {
           <Stack>
             <Heading textAlign={"center"}>Sign up to continue</Heading>
           </Stack>
-          <Stack gap={5}>
-            <Field label="Name" required>
-              <Input type="text" placeholder="Enter your name" />
-            </Field>
-            <Field label="Email" required>
-              <Input type="email" placeholder="Enter your email" />
-            </Field>
-            <Field label="Password" required>
-              <PasswordInput />
-            </Field>
-            <Field label="Password Confirmation" required>
-              <PasswordInput />
-            </Field>
-          </Stack>
+          <Tabs.Root defaultValue="account">
+            <Tabs.List>
+              <Tabs.Trigger value="account">
+                <LuFolder />
+                Account
+              </Tabs.Trigger>
+              <Tabs.Trigger value="company">
+                <LuFolder />
+                Company
+              </Tabs.Trigger>
+            </Tabs.List>
+            <Tabs.Content value="account">
+              <Stack gap={5}>
+                <Field label="Name" required>
+                  <Input type="text" placeholder="Enter your name" />
+                </Field>
+                <Field label="Email" required>
+                  <Input type="email" placeholder="Enter your email" />
+                </Field>
+                <Field label="Password" required>
+                  <PasswordInput />
+                </Field>
+                <Field label="Password Confirmation" required>
+                  <PasswordInput />
+                </Field>
+              </Stack>
+            </Tabs.Content>
+            <Tabs.Content value="company">
+              <Stack gap={5}>
+                <Field label="Company Name" required>
+                  <Input type="text" />
+                </Field>
+                <Field label="Company Email" required>
+                  <Input type="email" />
+                </Field>
+              </Stack>
+            </Tabs.Content>
+          </Tabs.Root>
           <Button colorPalette={"teal"}>Sign up</Button>
           <Flex fontSize={"sm"} justifyContent={"center"} gap={1}>
             <Text fontWeight={"light"}>Already Member?</Text>
