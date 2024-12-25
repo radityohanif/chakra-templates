@@ -1,13 +1,17 @@
 import { Button } from "@/components/ui/button";
+import { useCodeStore } from "@/stores/code-store";
 import { Flex, Heading, Stack } from "@chakra-ui/react";
 import { ReactNode } from "react";
+import { IoCodeSlash } from "react-icons/io5";
 
 export default function Example({
   children,
   title,
+  sourceCodeRepository,
 }: {
   children: ReactNode;
   title: string;
+  sourceCodeRepository: string;
 }) {
   return (
     <Stack gap={5}>
@@ -20,17 +24,26 @@ export default function Example({
           {title}
         </Heading>
         <Flex gap={2}>
-          <Button colorPalette={"teal"}>Preview</Button>
-          <Button variant={"outline"} colorPalette={"teal"}>
+          <Button
+            onClick={() =>
+              window.open(useCodeStore.get(sourceCodeRepository), "_blank")
+            }
+            colorPalette={"teal"}
+          >
+            <IoCodeSlash />
             Code
           </Button>
         </Flex>
       </Flex>
       <Flex
-        minH={"100vh"}
+        h={"100vh"}
+        overflowX={"hidden"}
+        overflowY={"auto"}
         borderRadius={"lg"}
         justifyContent={"center"}
-        alignItems={"center"}
+        alignItems={"start"}
+        position={"relative"}
+        contain={"layout"}
         shadow={{ base: "none", md: "xl" }}
       >
         {children}
