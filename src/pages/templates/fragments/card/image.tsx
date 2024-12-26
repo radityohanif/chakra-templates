@@ -21,9 +21,10 @@ export function CardImage({
         align={"start"}
         shadow={"md"}
         p={5}
+        bg={{ base: "white", _dark: "gray.900" }}
         borderRadius={"lg"}
         _hover={{
-          bg: { base: "gray.100", _dark: "gray.900" },
+          bg: { base: "gray.100", _dark: "gray.950" },
           shadow: "sm",
         }}
         transition="all 0.2s ease-in-out"
