@@ -21,7 +21,7 @@ export interface SectionProps {
 
 export default function Section({ title, desc, contents }: SectionProps) {
   return (
-    <Stack gap={10}>
+    <Stack gap={20}>
       <Stack gap={4}>
         <Heading fontSize={"2xl"}>{title}</Heading>
         <Text fontSize={"lg"}>{desc}</Text>
@@ -29,7 +29,7 @@ export default function Section({ title, desc, contents }: SectionProps) {
 
       {contents.map((content) => {
         return (
-          <Flex>
+          <Flex flexDir={{ base: "column", md: "row" }} gap={5}>
             <Flex flex={30}>
               <Heading fontSize={"xl"}>{content.title}</Heading>
             </Flex>

@@ -69,7 +69,7 @@ export default function TemplatesPages() {
         </Stack>
       </Flex>
       <Flex alignItems={"center"} minH={"100vh"} justifyContent={"center"}>
-        <Stack gap={20} w={"90%"}>
+        <Stack mt={{ base: 100, xl: 0 }} gap={50} w={"90%"}>
           {SectionContent.map((item) => {
             return (
               <Section
