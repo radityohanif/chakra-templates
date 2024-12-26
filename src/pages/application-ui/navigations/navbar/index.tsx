@@ -5,7 +5,7 @@ import FixedBackdropBlur from "./templates/fixed-backdrop-blur";
 
 export default function NavbarNavigationsApplicationUiPages() {
   return (
-    <ExampleLayouts>
+    <ExampleLayouts title="Navbar">
       <Example
         children={<Simple />}
         title="simple"

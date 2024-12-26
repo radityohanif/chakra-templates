@@ -9,7 +9,7 @@ import BackgroundImageBlur from "./templates/background-image-blur";
 
 export default function LoginFormsApplicationUiPages() {
   return (
-    <ExampleLayouts>
+    <ExampleLayouts title="Sign in">
       <Example
         children={<Simple />}
         title="simple"

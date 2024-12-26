@@ -5,7 +5,7 @@ import Simple from "./templates/simple";
 
 export default function RegisterFormsApplicationUiPages() {
   return (
-    <ExampleLayouts>
+    <ExampleLayouts title="Sign up">
       <Example
         children={<Simple />}
         title="simple"

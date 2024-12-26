@@ -1,15 +1,24 @@
 import { ColorModeButton } from "@/components/ui/color-mode";
-import {
-  Button,
-  Flex,
-  Heading,
-  Highlight
-} from "@chakra-ui/react";
+import { Button, Flex, Heading, Highlight } from "@chakra-ui/react";
 import { ReactNode } from "react";
 import { Link } from "react-router";
 
-function NavItem({ children }: { children: ReactNode }) {
-  return <Button variant={"ghost"}>{children}</Button>;
+function NavItem({
+  children,
+  href,
+  newWindow,
+}: {
+  children: ReactNode;
+  href: string;
+  newWindow?: boolean;
+}) {
+  return (
+    <Link to={href} target={newWindow ? "_blank" : "_self"}>
+      <Button variant={"ghost"} size={"lg"}>
+        {children}
+      </Button>
+    </Link>
+  );
 }
 
 export default function Navbar() {
@@ -22,21 +31,32 @@ export default function Navbar() {
       justifyContent={{ base: "center", md: "space-between" }}
       boxShadow={"lg"}
       zIndex={99999}
+      alignItems={"center"}
       backdropFilter={"blur(10px)"}
     >
-      <Flex gap={5}>
+      <Flex gap={5} alignItems={"center"}>
         <Link to={"/"}>
           <Heading>
             <Highlight query={["Chakra"]}>Chakra Templates</Highlight>
           </Heading>
         </Link>
       </Flex>
-      <Flex display={{ base: "none", md: "flex" }} gap={10}>
+      <Flex
+        alignItems={"center"}
+        display={{ base: "none", md: "flex" }}
+        gap={10}
+      >
         <Flex gap={2}>
-          <NavItem>Contribute</NavItem>
-          <NavItem>Support</NavItem>
+          <NavItem href="/templates">Templates</NavItem>
+          <NavItem
+            href="https://github.com/radityohanif/chakra-templates"
+            newWindow
+          >
+            Contribute
+          </NavItem>
+          {/* <NavItem href="/">Support</NavItem> */}
         </Flex>
-        <ColorModeButton />
+        <ColorModeButton size={"xl"} />
       </Flex>
     </Flex>
   );
