@@ -5,6 +5,7 @@ import RegisterFormsApplicationUiPages from "./pages/application-ui/forms/regist
 import NavbarNavigationsApplicationUiPages from "./pages/application-ui/navigations/navbar";
 import HomePages from "./pages/home";
 import TemplatesPages from "./pages/templates";
+import HeroSectionsPageSectionsMarketingPages from "./pages/marketing/page-sections/hero-sections";
 export default function App() {
   return (
     <BrowserRouter>
@@ -12,19 +13,18 @@ export default function App() {
         <Route element={<PublicLayouts />}>
           <Route index element={<HomePages />} />
           <Route path="templates" element={<TemplatesPages />} />
+          <Route path="marketing">
+            <Route path="page-sections">
+              <Route path="hero-sections" element={<HeroSectionsPageSectionsMarketingPages />} />
+            </Route>
+          </Route>
           <Route path="application-ui">
             <Route path="forms">
               <Route path="login" element={<LoginFormsApplicationUiPages />} />
-              <Route
-                path="register"
-                element={<RegisterFormsApplicationUiPages />}
-              />
+              <Route path="register" element={<RegisterFormsApplicationUiPages />} />
             </Route>
             <Route path="navigations">
-              <Route
-                path="navbar"
-                element={<NavbarNavigationsApplicationUiPages />}
-              />
+              <Route path="navbar" element={<NavbarNavigationsApplicationUiPages />} />
             </Route>
           </Route>
         </Route>

@@ -26,7 +26,7 @@ export default function BackgroundImage() {
         w={"100%"}
         opacity={0.7}
         bgGradient="to-b"
-        gradientFrom={{ base: "red.200", _dark: "red.700" }}
+        gradientFrom={{ base: "teal.200", _dark: "teal.700" }}
         gradientTo={{ base: "blue.400", _dark: "blue.800" }}
         position={"absolute"}
         zIndex={200}
@@ -78,12 +78,7 @@ export default function BackgroundImage() {
           <Button colorPalette={"teal"}>Sign in</Button>
           <Flex fontSize={"sm"} justifyContent={"center"} gap={1}>
             <Text fontWeight={"light"}>Not a Member?</Text>
-            <Text
-              color={"teal"}
-              fontWeight={"bold"}
-              cursor={"pointer"}
-              onClick={() => {}}
-            >
+            <Text color={"teal"} fontWeight={"bold"} cursor={"pointer"} onClick={() => {}}>
               Start a 7 day free trial
             </Text>
           </Flex>
